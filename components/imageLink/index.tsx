@@ -2,13 +2,10 @@ import React from "react";
 import Image from "next/image";
 type Props = {
   src: string;
+  index: number;
 };
-const ImageLink = ({ src }: Props) => {
-  return (
-    <div>
-      <Image src={src} alt="" quality={100} />
-    </div>
-  );
+const ImageLink = ({ src, index }: Props) => {
+  return <Image src={src} alt="" width={420} height={400} quality={100} />;
 };
 
 export default ImageLink;

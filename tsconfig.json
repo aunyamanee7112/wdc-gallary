@@ -18,6 +18,7 @@
     "paths": {
       "@/public/*" : ["public/*"],
       "@/images/*" : ["public/images/*"],
+      "@/icons/*" : ["public/icons/*"],
       "@/components/*" : ["components/*"],
       "@/constants/*" : ["constants/*"],
       "@/pages/*" : ["pages/*"],
