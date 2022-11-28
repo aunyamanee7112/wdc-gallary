@@ -1,7 +1,9 @@
 import React from "react";
 import { IGalleryProps } from "types/gridLayout";
 import ImageLink from "../imageLink";
-
+import styles from "@/styles/GridLayout.module.css";
+import classNames from "classnames";
+import { motion } from "framer-motion";
 type Props = {
   images: IGalleryProps[];
 };
@@ -10,21 +12,23 @@ const GridLayout = ({ images }: Props) => {
     <div className="relative h-full flex justify-center items-center">
       <div
         id="grid-container"
-        className="flex justify-center items-center w-[2110px] h-[1600px]
-          absolute visible top-[calc((100vh-1600px)/2) left-[calc((100vw-2110px)/2)]]"
+        className={classNames(
+          "flex justify-center items-center w-[2110px] h-[1600px] absolute visible",
+          styles.gridContainer
+        )}
       >
-        {/* className="grid grid-cols-[repeat(5,420px)] */}
-        <div id="grid-element" className="grid grid-cols-5">
+        <div className="grid grid-cols-5">
           {images.map((item, key) => (
-            <div
+            <motion.div
               key={key}
               id="element"
-              className="w-[420px] h-[400px] relative  border px-8 py-12"
+              className="w-[420px] h-[400px]  px-8 py-12"
+              whileHover={{ scale: 1.2 }}
             >
-              <div id="thumbnail-wrapper" className="relative">
+              <div id="thumbnail-wrapper" className="relative w-full h-full">
                 <ImageLink index={key} src={item.image} />
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

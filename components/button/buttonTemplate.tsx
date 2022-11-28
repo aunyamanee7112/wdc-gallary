@@ -6,7 +6,7 @@ type Props = {
 const ButtonTemplate = ({ onClick }: Props) => {
   return (
     <button
-      className="right-5 border z-10 fixed border-black p-2 cursor-pointer"
+      className="border bg-white border-black p-2 cursor-pointer"
       onClick={onClick}
     >
       <Image

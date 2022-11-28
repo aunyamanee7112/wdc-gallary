@@ -1,0 +1,4 @@
+.gridContainer {
+  top: calc((100vh - 1600px) / 10);
+  left: calc((100vw - 2110px) / 5);
+}

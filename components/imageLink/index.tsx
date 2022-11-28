@@ -1,11 +1,19 @@
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 type Props = {
   src: string;
   index: number;
 };
 const ImageLink = ({ src, index }: Props) => {
-  return <Image src={src} alt="" width={420} height={400} quality={100} />;
+  return (
+    <motion.img
+      className="w-full h-full object-contain"
+      layoutId={`container-${index}`}
+      src={src}
+      alt=""
+    />
+  );
 };
 
 export default ImageLink;

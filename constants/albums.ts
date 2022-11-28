@@ -5,16 +5,16 @@ const GALLARY:IGalleryProps[] = [
         image:"/images/1592.jpg"
     },
     {
-        image:"/images/2073.jpg"
+        image:"/images/DSCF5462.jpg"
     },
     {
-        image:"/images/DSC01157.JPG"
+        image:"/images/DSC01157.jpg"
     },
     {
-        image:"/images/1555.jpg"
+        image:"/images/DSCF5442.jpg"
     },
     {
-        image:"/images/1566.jpg"
+        image:"/images/DSCF5415.jpg"
     },
     {
         image:"/images/7706.jpg"
@@ -35,10 +35,10 @@ const GALLARY:IGalleryProps[] = [
         image:"/images/77.jpg"
     },
     {
-        image:"/images/DSCF5467.JPG"
+        image:"/images/DSCF5467.jpg"
     },
     {
-        image:"/images/DSC01185.JPG"
+        image:"/images/DSC01185.jpg"
     },
     {
         image:"/images/1152.jpg"
