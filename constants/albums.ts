@@ -2,7 +2,8 @@ import { IGalleryProps } from "types/gridLayout"
 
 const GALLARY:IGalleryProps[] = [
     {
-        image:"/images/1592.jpg"
+        image:"/images/1592.jpg",
+        title:"Thai Temple Ayuthaya"
     },
     {
         image:"/images/DSCF5462.jpg"
