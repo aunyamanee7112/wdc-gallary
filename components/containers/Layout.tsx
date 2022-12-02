@@ -13,7 +13,7 @@ const Layout = () => {
 
   return (
     <div className="w-[100vw] h-[calc(1vh  * 100)]">
-      <Tab tabVisible={tabVisible} />
+      {/* <Tab tabVisible={tabVisible} /> */}
       <div className="relative h-8 py-5">
         <Logo />
         <div className="flex gap-2 fixed right-5 z-10">
@@ -21,11 +21,11 @@ const Layout = () => {
           <ButtonTemplate onClick={() => setgridVisible((prev) => !prev)} />
         </div>
       </div>
-      {/* {gridVisible ? (
+      {gridVisible ? (
         <GridLayout images={GALLARY} />
       ) : (
         <SlideLayout images={GALLARY} />
-      )} */}
+      )}
     </div>
   );
 };

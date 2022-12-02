@@ -9,12 +9,7 @@ type Props = {
   images: IGalleryProps[];
 };
 const GridLayout = ({ images }: Props) => {
-  const [title, settitle] = useState("test");
-  const [visible, setvisible] = useState(false);
-  const handleDescription = (title?: string) => {
-    setvisible((prev) => !prev);
-    title && settitle(title);
-  };
+  const [index, setIndex] = useState<string>();
   return (
     <div className="relative h-[100vh] flex justify-center items-center">
       <div
@@ -27,11 +22,17 @@ const GridLayout = ({ images }: Props) => {
         <div className="grid grid-cols-5">
           {images.map((item, key) => (
             <motion.div
+              onMouseEnter={() => {
+                setIndex(item.title);
+              }}
+              onMouseLeave={() => {
+                setIndex(undefined);
+              }}
               key={key}
               id="element"
               className="w-[420px] h-[400px]  px-8 py-12 cursor-pointer"
               whileHover={{ scale: 1.2 }}
-              transition={{ delay: 0.3, duration: 0.3 }}
+              transition={{ delay: 0.1, duration: 0.3 }}
             >
               <div id="thumbnail-wrapper" className="relative w-full h-full">
                 <ImageLink index={key} src={item.image} />
@@ -39,8 +40,8 @@ const GridLayout = ({ images }: Props) => {
             </motion.div>
           ))}
         </div>
+        {index && <Description title={index} />}
       </div>
-      {visible && <Description title={title} />}
     </div>
   );
 };

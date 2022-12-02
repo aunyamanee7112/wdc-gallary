@@ -1,10 +1,13 @@
 import React from "react";
-
-const Description = ({ title }: { title?: string }) => {
+import { motion } from "framer-motion";
+const Description = ({ title, ...props }: { title?: string }) => {
   return (
-    <div className="z-10 fixed bottom-6 text-center p-5 w-[250px] h-[100px] bg-white border-black border">
+    <motion.div
+      transition={{ duration: 2 }}
+      className="z-10 fixed bottom-6 text-center uppercase  p-5 w-[350px] h-[140px] bg-white border-black border"
+    >
       {title}
-    </div>
+    </motion.div>
   );
 };
 

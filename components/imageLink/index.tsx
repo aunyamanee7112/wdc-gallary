@@ -8,7 +8,8 @@ const ImageLink = ({ src, index }: Props) => {
   return (
     <motion.img
       className="w-full h-full object-contain"
-      layoutId={`container-${index}`}
+      // layoutId={`container-${index}`}
+      // transition={{ duration: 0.5 }}
       src={src}
       alt=""
     />
