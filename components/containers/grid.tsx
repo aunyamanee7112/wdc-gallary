@@ -15,7 +15,7 @@ const GridLayout = ({ images }: Props) => {
       <div
         id="grid-container"
         className={classNames(
-          "flex justify-center items-center w-[2110px] h-[1600px] absolute visible",
+          "w-[2110px] h-[1600px] absolute visible",
           styles.gridContainer
         )}
       >
@@ -40,8 +40,8 @@ const GridLayout = ({ images }: Props) => {
             </motion.div>
           ))}
         </div>
-        {index && <Description title={index} />}
       </div>
+      {index && <Description title={index} />}
     </div>
   );
 };
